@@ -28,6 +28,7 @@ const getDefaultWeather = async (position) => {
 
     } catch (e) {
         console.log(e)
+        alert("Nama Kota Salah / Tidak ada")
     }
 
 }
@@ -50,6 +51,7 @@ const getSearchWeather = async (search) => {
         desc.innerText = getSearchData.data.weather[0].description
     } catch (e) {
         console.log(e)
+        alert("Nama Kota Salah / Tidak ada")
     }
 
 }
