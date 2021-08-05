@@ -1,2 +1,12 @@
 # SimpleWeatherApp-HTML-CSS-JS
-I made this simple weather using HTML, CSS, Javascript and Bulma for the styling. And im using OpenWeather API for the weather data
+This simple weather app takes your current location to display the current weather conditions in your location, and also can display weather conditions based on city name
+
+# Technologies
+- HTML5
+- CSS3
+- Javascript
+- Bulma
+
+# Assets
+- Background Image
+  - https://unsplash.com/photos/SFT9G3pAxLY
