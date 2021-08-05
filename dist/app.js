@@ -4,6 +4,8 @@ const icon = document.querySelector('.iconweather')
 const desc = document.querySelector('.desc')
 const form = document.querySelector('#form-weather')
 const errorNotification = document.querySelector('.error-notification')
+const modal = document.querySelector('.modal')
+const modalButton = document.querySelector('.modal-button')
 
 
 
@@ -39,6 +41,10 @@ const showError = (error) => {
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         form.elements.searchbar.value = ''
+        modal.classList.add('is-active')
+        modalButton.addEventListener('click', () => {
+            modal.classList.remove('is-active')
+        })
     })
 }
 
