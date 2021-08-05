@@ -3,14 +3,7 @@ const temp = document.querySelector('.temp')
 const icon = document.querySelector('.iconweather')
 const desc = document.querySelector('.desc')
 const form = document.querySelector('#form-weather')
-
-// Listener
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const cityQuery = form.elements.searchbar.value
-    getSearchWeather(cityQuery)
-    form.elements.searchbar.value = ''
-})
+const errorNotification = document.querySelector('.error-notification')
 
 
 
@@ -26,25 +19,34 @@ const getDefaultWeather = async (position) => {
         icon.src = `http://openweathermap.org/img/wn/${getDefaultData.data.weather[0].icon}@2x.png`
         desc.innerText = getDefaultData.data.weather[0].description
         temp.innerText = `${celcius.toFixed(1)}°C`
-
+        // LISTENER
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const cityQuery = form.elements.searchbar.value
+            getSearchWeather(cityQuery)
+            form.elements.searchbar.value = ''
+        })
     } catch (e) {
         console.log(e)
-        alert("Nama Kota Salah / Tidak ada")
+        alert("City name is wrong / Does not exist")
     }
 
 }
 
 const showError = (error) => {
-    console.log(error.message)
-    cityname.innerText = ''
-    cityname.classList.add('error-1')
+    errorNotification.innerHTML = `<p>${error.message}</p>`
+    errorNotification.classList.add('p-3', 'has-text-white', 'box', 'has-background-danger-dark')
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        form.elements.searchbar.value = ''
+    })
 }
 
 //GET GEOLOCATION LAT AND LONG
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(getDefaultWeather, showError);
 } else {
-    // console.log('It seems like Geolocation, which is required for this page, is not enabled in your browser. Please use a browser which supports it.');
+    console.log('It seems like Geolocation, which is required for this page, is not enabled in your browser. Please use a browser which supports it.');
 }
 
 //GET LOCATION BASED ON SEARCH
