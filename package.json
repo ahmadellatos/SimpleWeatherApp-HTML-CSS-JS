@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "I made this simple weather using HTML, CSS, Javascript and Bulma for the styling. And im using OpenWeather API for the weather data",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadellatos/SimpleWeatherApp-HTML-CSS-JS.git"
+  },
+  "author": "Ahmad Alatas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadellatos/SimpleWeatherApp-HTML-CSS-JS/issues"
+  },
+  "homepage": "https://ahmadellatos.github.io/SimpleWeatherApp-HTML-CSS-JS",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
