@@ -19,7 +19,22 @@ body::-webkit-scrollbar {
     backdrop-filter: blur(30px) !important;
 }
 
+.modal-button {
+    width: 100%;
+}
+.modal-card, .modal-content {
+    width: 15rem !important;
+}
+
 .input {
     outline: none !important;
     border:none !important;
+}
+
+@media screen and (min-width: 769px) {
+    .modal-card, .modal-content {
+        margin: 0 auto;
+        max-height: calc(100vh - 40px);
+        width: 25rem !important;
+    }
 }
