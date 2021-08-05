@@ -12,38 +12,14 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
-}
-
-
+}   
 
 .card {
     background-color: rgba(255, 255, 255, 0.3) !important;
     backdrop-filter: blur(30px) !important;
 }
 
-.title {
-    color: #fff !important;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.weather-card {
-    color: #fff !important;
-    text-align: center;
-}
-
 .input {
     outline: none !important;
     border:none !important;
-}
-
-
-.cityname {
-    margin-top: 1.5rem;
-    font-size: 1.4rem;
-}
-
-.temp{
-    font-size: 2rem;
-    font-weight: 500;
 }

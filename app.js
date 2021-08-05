@@ -4,6 +4,7 @@ const icon = document.querySelector('.iconweather')
 const desc = document.querySelector('.desc')
 const form = document.querySelector('#form-weather')
 
+// Listener
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     const cityQuery = form.elements.searchbar.value
@@ -33,11 +34,17 @@ const getDefaultWeather = async (position) => {
 
 }
 
+const showError = (error) => {
+    console.log(error.message)
+    cityname.innerText = ''
+    cityname.classList.add('error-1')
+}
+
 //GET GEOLOCATION LAT AND LONG
 if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(getDefaultWeather);
+    navigator.geolocation.getCurrentPosition(getDefaultWeather, showError);
 } else {
-    alert('It seems like Geolocation, which is required for this page, is not enabled in your browser. Please use a browser which supports it.');
+    // console.log('It seems like Geolocation, which is required for this page, is not enabled in your browser. Please use a browser which supports it.');
 }
 
 //GET LOCATION BASED ON SEARCH
@@ -51,7 +58,7 @@ const getSearchWeather = async (search) => {
         desc.innerText = getSearchData.data.weather[0].description
     } catch (e) {
         console.log(e)
-        alert("Nama Kota Salah / Tidak ada")
+        alert("City name is wrong / Does not exist")
     }
 
 }
