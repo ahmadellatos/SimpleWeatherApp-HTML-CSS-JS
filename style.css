@@ -1,8 +1,7 @@
 body {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(Assets/BackgroundImage1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,6 +18,14 @@ body::-webkit-scrollbar {
     backdrop-filter: blur(30px) !important;
 }
 
+.modal {
+    transition: 200ms opacity ease-in-out !important; 
+}
+
+.is-active {
+    transition: 200ms opacity ease-in-out !important; 
+}
+
 .modal-button {
     width: 100%;
 }
@@ -31,10 +38,9 @@ body::-webkit-scrollbar {
     border:none !important;
 }
 
+
 @media screen and (min-width: 769px) {
     .modal-card, .modal-content {
-        margin: 0 auto;
-        max-height: calc(100vh - 40px);
         width: 25rem !important;
     }
 }

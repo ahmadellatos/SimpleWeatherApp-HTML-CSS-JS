@@ -5,6 +5,7 @@ const desc = document.querySelector('.desc')
 const form = document.querySelector('#form-weather')
 const errorNotification = document.querySelector('.error-notification')
 const modal = document.querySelector('.modal')
+const modalContent = document.querySelector('.modal-content')
 const modalButton = document.querySelector('.modal-button')
 
 
