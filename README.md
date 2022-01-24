@@ -1,7 +1,7 @@
 # SimpleWeatherApp-HTML-CSS-JS
 This simple weather app takes your current location to display the current weather conditions in your location, and also can display weather conditions based on city name
 
-#Live Demo
+# Live Demo
 https://ahmadellatos.github.io/SimpleWeatherApp-HTML-CSS-JS/
 
 # Technologies
